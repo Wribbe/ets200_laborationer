@@ -50,16 +50,6 @@ public class NextDateTest {
 	}
 
 
-	/* 
-	 * Tests whether the triangle specified in the fixture (setUp) 
-	 * is right-angled. 	
-	 *
-	 * A public void method that is attached to be run as a test case. 
-	 * To run the method, JUnit first constructs a fresh instance of the class then 
-	 * invokes the annotated method. Any exceptions thrown by the test will be reported
-	 * by JUnit as a failure. If no exceptions are thrown, the test is assumed to have 
-	 * succeeded. 
-	*/
 	@Test
 	public void test() {
 	}
