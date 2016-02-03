@@ -16,8 +16,7 @@ import org.junit.Test;
  */
 public class NextDateTest {
 
-	
-
+	NextDate next_date = null;
 	
 	@BeforeClass
 	/*
@@ -39,7 +38,7 @@ public class NextDateTest {
 	 * Initializes common objects. The method will be run before the Test method.
 	 */
 	public void setUp() throws Exception {
-		
+		next_date = new NextDate(0,0,0);
 	}
 
 	@After
@@ -47,10 +46,10 @@ public class NextDateTest {
 	 *   Cleanup method. This method will be run after the Test method is completed
 	 */
 	public void tearDown() throws Exception {
-		
+		next_date = null;
 	}
 
-	@Test
+
 	/* 
 	 * Tests whether the triangle specified in the fixture (setUp) 
 	 * is right-angled. 	
@@ -61,6 +60,7 @@ public class NextDateTest {
 	 * by JUnit as a failure. If no exceptions are thrown, the test is assumed to have 
 	 * succeeded. 
 	*/
+	@Test
 	public void test() {
 //		assertTrue("Should return true for a right-angled triangle",
 //	            rightAngledTriangle.isRightAngled());
