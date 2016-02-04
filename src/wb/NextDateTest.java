@@ -9,6 +9,17 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class NextDateTest {
+
+	String invalid_date = "invalid Input Date";
+
+	int total_tests = 20;
+	
+	TestCase[] test_cases = new TestCase[total_tests+1];
+
+	TestCase t1 = new TestCase(-1,-1,-1, invalid_date);
+	TestCase terror = new TestCase(5,5,2001, invalid_date);
+
+	NextDate next_date = null;
 	
 	public class TestCase{
 		String result;
@@ -24,8 +35,6 @@ public class NextDateTest {
 		}
 	}
 
-	NextDate next_date = null;
-
 	@Before
 	public void setUp() throws Exception {
 		next_date = new NextDate(0,0,0);
@@ -35,7 +44,10 @@ public class NextDateTest {
 	public void tearDown() throws Exception {
 		next_date = null;
 	}
-
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+	}
 	
 	public String format(String format_string, Object... args) {
 		return String.format(format_string, args);
@@ -51,10 +63,6 @@ public class NextDateTest {
 		boolean passed = next_date.run(day, month, year).equals(result_string);
 		assertTrue(error_string, passed);
 	}
-	String invalid_date = "invalid Input Date";
-
-	TestCase t1 = new TestCase(-1,-1,-1, invalid_date);
-	TestCase terror = new TestCase(5,5,2001, invalid_date);
 
 	@Test
 	public void test() {
