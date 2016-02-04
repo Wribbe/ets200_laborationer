@@ -10,14 +10,16 @@ import org.junit.Test;
 
 public class NextDateTest {
 
-	String invalid_date = "invalid Input Date";
+	String invalid_date_short_path = "invalid Input Date";
+	String invalid_date = "Invalid Input Date";
+	String invalid_year = "Invalid Next Year";
 
 	int total_tests = 20;
 	
 	TestCase[] test_cases = new TestCase[total_tests+1];
 
-	TestCase t1 = new TestCase(-1,-1,-1, invalid_date);
-	TestCase terror = new TestCase(5,5,2001, invalid_date);
+	TestCase t1 = new TestCase(-1,-1,-1, invalid_date_short_path);
+	TestCase terror = new TestCase(5,5,2001, invalid_date_short_path);
 
 	NextDate next_date = null;
 	
