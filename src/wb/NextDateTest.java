@@ -14,6 +14,30 @@ public class NextDateTest {
 	String invalid_date = "Invalid Input Date";
 	String invalid_year = "Invalid Next Year";
 
+	int month_31 = 1;
+	int month_30 = 4;
+	int month_december = 12;
+	int month_februari = 2;
+	int month_invalid_high = 14;
+	int month_invalid_low = -1;
+	
+	int day_30 = 30;
+	int day_31 = 31;
+	int day_sub_30 = 20;
+	int day_post_31 = 35;
+	int day_invalid_low = -1;
+	int day_invalid_high = 50;
+
+	int day_28 = 28;
+	int day_sub_28 = 20;
+	int day_29 = 29;
+	int day_post_29 = 33;
+	
+	int year_invalid_high = 2021;
+	int year_invalid_low = 1800;
+	int year_valid_leap = 2016;
+	int year_valid_non_leap = 2015;
+
 	int total_tests = 20;
 	
 	TestCase[] test_cases = new TestCase[total_tests+1];
